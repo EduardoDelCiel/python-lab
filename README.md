@@ -8,6 +8,7 @@ Meu laboratório de Python: todos os meus estudos, exercícios e projetos reunid
 |---|---|---|
 | [01-for-e-while](01-for-e-while/) | Laços de repetição | 10 exercícios: `for`, `while`, `range()`, `break`, `continue`, listas e dicionários |
 | [02-funcoes](02-funcoes/) | Funções | Projeto *Sabor Express* (app de restaurantes): `def`, parâmetros, `import`, `elif`, `try`/`except` |
+| [03-regex](03-regex/) | Strings e Regex | 10 exercícios: métodos de string, fatiamento e expressões regulares (`re.findall`, `re.sub`, `re.fullmatch`, `re.search`) |
 
 ```
 python-lab/
@@ -15,9 +16,12 @@ python-lab/
 ├── 01-for-e-while/
 │   ├── README.md          ← teoria do módulo + lista de exercícios
 │   └── ex01_...py … ex10_...py
-└── 02-funcoes/
-    ├── README.md          ← teoria + mapa das funções do projeto
-    └── sabor_express.py
+├── 02-funcoes/
+│   ├── README.md          ← teoria + mapa das funções do projeto
+│   └── sabor_express.py
+└── 03-regex/
+    ├── README.md          ← teoria de strings e regex + cola rápida
+    └── ex01_...py … ex10_...py
 ```
 
 ## Como estudar por aqui
@@ -93,6 +97,37 @@ No Windows, use `python` em vez de `python3`.
 | `lista.append(item)` | adicionar no fim da lista | [append()](02-funcoes/README.md#append) |
 | `dicionario['chave'] = valor` | alterar um valor do dicionário | [Alterar um valor no dicionário](02-funcoes/README.md#alterar-um-valor-no-dicionário) |
 
+### 03 · Strings e Regex
+
+| Sintaxe | Para que serve | Explicação |
+|---|---|---|
+| `texto.metodo()` | chamar um método | [O que é um método](03-regex/README.md#o-que-é-um-método) |
+| `.lower()` / `.upper()` / `.title()` | mudar maiúsculas e minúsculas | [lower() e upper()](03-regex/README.md#lower-e-upper) |
+| `.startswith()` / `.endswith()` | conferir como um texto começa ou termina | [startswith() e endswith()](03-regex/README.md#startswith-e-endswith) |
+| `.isupper()` `.isdigit()` `.isalpha()` `.isalnum()` | perguntar o tipo de caractere | [Métodos de verificação](03-regex/README.md#métodos-de-verificação) |
+| `texto[0]` / `texto[-1]` | pegar um caractere pela posição | [Índices](03-regex/README.md#índices) |
+| `texto[inicio:fim]` | pegar um pedaço do texto | [Fatiamento](03-regex/README.md#fatiamento) |
+| `and` / `or` | juntar condições | [and](03-regex/README.md#and) |
+| `all(... for ... in ...)` | testar se todos os itens atendem uma condição | [all()](03-regex/README.md#all) |
+| `if lista:` / `if resultado:` | testar se algo está vazio | [Valores verdadeiros e falsos](03-regex/README.md#valores-verdadeiros-e-falsos) |
+| `import re` | usar expressões regulares | [import re](03-regex/README.md#import-re) |
+| `r'...'` / `rf'...'` | raw string para padrões de regex | [Raw string](03-regex/README.md#raw-string) |
+| `re.findall()` | achar todas as ocorrências (lista) | [re.findall()](03-regex/README.md#refindall) |
+| `re.sub()` | substituir ocorrências | [re.sub()](03-regex/README.md#resub) |
+| `re.match()` / `re.fullmatch()` | validar o começo / o texto inteiro | [re.match() e re.fullmatch()](03-regex/README.md#rematch-e-refullmatch) |
+| `re.search()` | achar a primeira ocorrência em qualquer lugar | [re.search()](03-regex/README.md#research) |
+| `.group(n)` | pegar o que um grupo capturou | [Objeto Match](03-regex/README.md#objeto-match) |
+| `re.IGNORECASE` | ignorar maiúsculas e minúsculas | [re.IGNORECASE](03-regex/README.md#reignorecase) |
+| `re.escape()` | usar texto do usuário dentro de um padrão | [re.escape()](03-regex/README.md#reescape) |
+| `\d` `\w` `\s` `.` | dígito, letra, espaço, qualquer caractere | [Dígitos e letras](03-regex/README.md#dígitos-e-letras) |
+| `[A-Z]` `[a-zà-ÿ]` `[^0-9]` | um caractere de um conjunto ou faixa | [Colchetes](03-regex/README.md#colchetes) |
+| `+` `*` `?` `{n}` `{n,m}` | quantas vezes algo se repete | [Quantificadores](03-regex/README.md#quantificadores) |
+| `\b` | borda de palavra (palavra inteira) | [Borda de palavra](03-regex/README.md#borda-de-palavra) |
+| `\.` `\(` | procurar um símbolo especial literalmente | [Escapando caracteres especiais](03-regex/README.md#escapando-caracteres-especiais) |
+| `( )` | capturar partes do texto | [Grupos](03-regex/README.md#grupos) |
+
+Todos os símbolos de regex numa tabela só: [Cola rápida de regex](03-regex/README.md#cola-rápida-de-regex).
+
 ---
 
 ## Eu quero...
@@ -121,6 +156,16 @@ No Windows, use `python` em vez de `python3`.
 | alinhar textos em colunas | `.ljust(n)` | [02/sabor_express](02-funcoes/sabor_express.py) |
 | limpar a tela do terminal | `os.system('cls' / 'clear')` | [02/sabor_express](02-funcoes/sabor_express.py) |
 | fazer um menu que se repete | `while True` + `break` | [02/README](02-funcoes/README.md#para-ir-além-menu-com-while) |
+| deixar um texto todo em minúsculas | `.lower()` | [03/ex01](03-regex/ex01_nome_do_produto.py) |
+| pegar os primeiros ou os últimos caracteres | `texto[:3]` / `texto[-3:]` | [03/ex03](03-regex/ex03_partes_da_senha.py) |
+| conferir se um texto começa/termina com algo | `.startswith()` / `.endswith()` | [03/ex04](03-regex/ex04_validar_url.py) |
+| exigir duas condições ao mesmo tempo | `and` | [03/ex04](03-regex/ex04_validar_url.py) |
+| achar números dentro de um texto | `re.findall(r'\d+', texto)` | [03/ex05](03-regex/ex05_numero_da_receita.py) |
+| trocar uma palavra inteira por outra | `re.sub(rf'\b{palavra}\b', nova, texto)` | [03/ex06](03-regex/ex06_substituir_palavra.py) |
+| validar se um nome só tem letras | `.isalpha()` ou `re.fullmatch()` | [03/ex07](03-regex/ex07_validar_nome.py) |
+| validar um formato (CPF, CEP, telefone...) | `re.fullmatch()` | [03/ex08](03-regex/ex08_validar_cpf.py) |
+| buscar sem diferenciar maiúsculas | `re.IGNORECASE` | [03/ex09](03-regex/ex09_palavras_por_letra.py) |
+| separar partes de um texto (nome, ano...) | `re.search()` + grupos `( )` | [03/ex10](03-regex/ex10_nome_e_ano.py) |
 
 ---
 
@@ -132,6 +177,7 @@ Este repositório junta o que antes estava espalhado em repositórios separados:
 |---|---|
 | [Python.For-and-While](https://github.com/EduardoDelCiel/Python.For-and-While) | [01-for-e-while](01-for-e-while/) |
 | [funcoes.pyt](https://github.com/EduardoDelCiel/funcoes.pyt) | [02-funcoes](02-funcoes/) |
+| [Regex.Python](https://github.com/EduardoDelCiel/Regex.Python) | [03-regex](03-regex/) |
 
 ## Licença
 
