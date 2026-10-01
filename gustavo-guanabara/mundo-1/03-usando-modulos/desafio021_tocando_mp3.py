@@ -13,12 +13,16 @@ from pathlib import Path
 
 import pygame
 
-# MELHORIA: o original carregava "mikolash.mp3" só pelo nome. Isso funciona
+# MELHORIA: o original carregava o mp3 só pelo nome do arquivo. Isso funciona
 # quando o programa roda de dentro desta pasta, que é o que o PyCharm faz.
-# Rodando de outra pasta, dava o erro "No file 'mikolash.mp3' found".
+# Rodando de outra pasta, dava o erro "No file ... found".
 # Path(__file__).parent é a pasta onde este arquivo .py está, então o mp3 é
 # encontrado de qualquer lugar.
-arquivo = Path(__file__).parent / "mikolash.mp3"
+#
+# O áudio original (um trecho tirado do site 101soundboards.com) foi trocado
+# por melodia.mp3, uma melodia curta criada com Python para este repositório.
+# Assim o projeto não tem nenhum áudio de terceiros.
+arquivo = Path(__file__).parent / "melodia.mp3"
 
 pygame.init()
 pygame.mixer.init()

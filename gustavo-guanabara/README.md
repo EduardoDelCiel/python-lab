@@ -68,7 +68,7 @@ gustavo-guanabara/
     ├── README.md                          ← seções, progresso e índice de sintaxe
     ├── 01-primeiros-passos/               desafios 001 e 002
     ├── 02-tratando-dados-e-fazendo-contas/ desafios 003 a 015
-    ├── 03-usando-modulos/                 desafios 016 a 021 (+ mikolash.mp3)
+    ├── 03-usando-modulos/                 desafios 016 a 021 (+ melodia.mp3)
     ├── 04-manipulando-texto/              desafios 022 a 027
     ├── 05-condicoes/                      desafios 028 a 035
     └── 06-cores-no-terminal/              anotações da aula de cores

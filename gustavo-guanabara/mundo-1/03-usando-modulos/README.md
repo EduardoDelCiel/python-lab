@@ -15,7 +15,7 @@ Como usar código pronto: os módulos que já vêm com o Python (`math`, `random
 | 018 | [desafio018_seno_cosseno_tangente.py](desafio018_seno_cosseno_tangente.py) | Seno, cosseno e tangente de um ângulo | `sin()`, `cos()`, `tan()`, `radians()`, f-string |
 | 019 | [desafio019_sorteando_um_aluno.py](desafio019_sorteando_um_aluno.py) | Sorteia um aluno | `random.choice()`, lista |
 | 020 | [desafio020_sorteando_a_ordem.py](desafio020_sorteando_a_ordem.py) | Sorteia a ordem dos alunos | `random.shuffle()` |
-| 021 | [desafio021_tocando_mp3.py](desafio021_tocando_mp3.py) | Toca o arquivo [mikolash.mp3](mikolash.mp3) | `pygame`, `pip install` |
+| 021 | [desafio021_tocando_mp3.py](desafio021_tocando_mp3.py) | Toca o arquivo [melodia.mp3](melodia.mp3) | `pygame`, `pip install` |
 
 ---
 
@@ -127,12 +127,12 @@ A regra: nunca dê a uma variável o nome de uma função que você usa (`cos`, 
 
 ### Caminho de arquivos
 
-Quando o programa abre um arquivo pelo nome (`"mikolash.mp3"`), o Python procura na **pasta de onde o programa foi executado**, que nem sempre é a pasta do `.py`. Para achar o arquivo que está ao lado do código, o desafio 021 usa:
+Quando o programa abre um arquivo pelo nome (`"melodia.mp3"`), o Python procura na **pasta de onde o programa foi executado**, que nem sempre é a pasta do `.py`. Para achar o arquivo que está ao lado do código, o desafio 021 usa:
 
 ```python
 from pathlib import Path
 
-arquivo = Path(__file__).parent / "mikolash.mp3"
+arquivo = Path(__file__).parent / "melodia.mp3"
 ```
 
 O `__file__` é o caminho do próprio `.py`, e o `.parent` é a pasta dele.
@@ -144,6 +144,7 @@ O `__file__` é o caminho do próprio `.py`, e o `.parent` é a pasta dele.
 | Desafio | O que mudou |
 |---|---|
 | 018 | **Correção:** a variável `cos` substituía a função `cos()`. Renomeada para `cosseno` ([por quê](#cuidado-não-use-nome-de-função-como-variável)) |
-| 021 | **Melhoria:** o mp3 é encontrado pela pasta do arquivo, e não da execução. Antes, rodando de fora da pasta, dava `No file 'mikolash.mp3' found` ([por quê](#caminho-de-arquivos)). O desafio também ganhou o cabeçalho com o enunciado, que não tinha |
+| 021 | **Melhoria:** o mp3 é encontrado pela pasta do arquivo, e não da execução. Antes, rodando de fora da pasta, dava erro de arquivo não encontrado ([por quê](#caminho-de-arquivos)). O desafio também ganhou o cabeçalho com o enunciado, que não tinha |
 | 016 | **Melhoria:** removido o `from math import trunc`, que não era usado (o código já usava `import math`) |
 | 017 | Nome da variável: `CateotoAdjacente` → `CatetoAdjacente` |
+| 021 | **Áudio:** o trecho original (tirado do site 101soundboards.com) foi trocado por [melodia.mp3](melodia.mp3), uma melodia curta criada com Python para este repositório. Assim o projeto não tem áudio de terceiros, e o desafio funciona igual |
