@@ -9,6 +9,7 @@ Meu laboratório de Python: todos os meus estudos, exercícios e projetos reunid
 | [01-for-e-while](01-for-e-while/) | Laços de repetição | 10 exercícios: `for`, `while`, `range()`, `break`, `continue`, listas e dicionários |
 | [02-funcoes](02-funcoes/) | Funções | Projeto *Sabor Express* (app de restaurantes): `def`, parâmetros, `import`, `elif`, `try`/`except` |
 | [03-regex](03-regex/) | Strings e Regex | 10 exercícios: métodos de string, fatiamento e expressões regulares (`re.findall`, `re.sub`, `re.fullmatch`, `re.search`) |
+| [gustavo-guanabara](gustavo-guanabara/) | Curso em Vídeo (Python 3) | Exercícios e anotações do curso do Gustavo Guanabara. Mundo 1 concluído: 35 desafios |
 
 ```
 python-lab/
@@ -19,9 +20,12 @@ python-lab/
 ├── 02-funcoes/
 │   ├── README.md          ← teoria + mapa das funções do projeto
 │   └── sabor_express.py
-└── 03-regex/
-    ├── README.md          ← teoria de strings e regex + cola rápida
-    └── ex01_...py … ex10_...py
+├── 03-regex/
+│   ├── README.md          ← teoria de strings e regex + cola rápida
+│   └── ex01_...py … ex10_...py
+└── gustavo-guanabara/
+    ├── README.md          ← sobre o curso e o que aprendi
+    └── mundo-1/           ← 6 seções, 35 desafios + índice de sintaxe próprio
 ```
 
 ## Como estudar por aqui
@@ -29,7 +33,7 @@ python-lab/
 1. **Procurando uma sintaxe?** Use o [Índice de sintaxe](#índice-de-sintaxe) abaixo (ou `Ctrl + F` nesta página) e clique no link da explicação.
 2. **Tem um problema e não sabe qual ferramenta usar?** Veja a tabela [Eu quero...](#eu-quero).
 3. **Cada pasta tem o seu README**, com a lista de exercícios primeiro e depois a teoria separada por categoria.
-4. **Cada sintaxe é explicada uma vez só**, na pasta onde aparece pela primeira vez. As pastas seguintes apontam para a explicação original.
+4. **Cada sintaxe é explicada uma vez só**, na pasta onde aparece pela primeira vez. As pastas seguintes apontam para a explicação original. A exceção é a pasta [gustavo-guanabara](gustavo-guanabara/), que é independente: ela tem as próprias explicações e o [próprio índice de sintaxe](gustavo-guanabara/mundo-1/README.md#índice-de-sintaxe).
 5. **Nos arquivos `.py`**, o cabeçalho diz o objetivo e os conceitos do exercício. Os comentários `# CORREÇÃO` e `# MELHORIA` mostram o que foi ajustado em relação ao código original.
 
 ### Rodando um exercício

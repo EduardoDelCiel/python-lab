@@ -1,2 +1,7 @@
 __pycache__/
 *.pyc
+
+# PyCharm e ambientes virtuais
+.idea/
+.venv/
+venv/
